@@ -26,3 +26,5 @@ int max(int x, int y, int z);
  *
  */
 int toGrayScaleAverage(int r, int g, int b);
+int toGrayScaleLightness(int r, int g, int b);
+int toGrayScaleLuminosity(int r, int g, int b);
