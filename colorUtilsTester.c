@@ -247,6 +247,17 @@ int main(int argc, char **argv) {
     printf("PASSED\n");
     numPassed++;
   }
+   r = 200, g = 100, b = 50;
+  expectedResult = 128;
+  printf("TESTING: toSepiaBlue(%d,%d,%d): ", r, g, b);
+  result = min(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toSepiaBlue returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
