@@ -86,3 +86,21 @@ int toSepiaBlue(int r, int g, int b)
     return round(b);
   }
 }
+int min(int r, int g,int b)
+{
+ int min = r;
+ if (min < g && min < b)
+ {
+  min = r;
+ }
+ else if(g < min && g < b)
+ {
+  min = g;
+ }
+ else
+ {
+  min = b;
+ }
+
+ return min;
+}
