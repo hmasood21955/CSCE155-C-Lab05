@@ -192,6 +192,17 @@ int main(int argc, char **argv) {
   //        min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
   //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
   //       for at least 6 and a total of at least 20
+  r = 15 , g = 67 , b = 58;
+   expectedResult = 15;
+  printf("TESTING: min(%d,%d,%d): ", r, g, b);
+  result = min(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: min returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
