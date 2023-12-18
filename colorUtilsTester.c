@@ -203,6 +203,17 @@ int main(int argc, char **argv) {
     printf("PASSED\n");
     numPassed++;
   }
+  r = 140, g = 50, b = 60;
+  expectedResult = 67;
+  printf("TESTING: toGrayScaleLightness(%d,%d,%d): ", r, g, b);
+  result = min(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleLightness returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
